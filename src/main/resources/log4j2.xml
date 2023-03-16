@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" packages="com.example.user">
+    <Appenders>
+        <Console name="CONSOLE">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] %c - %X{requestUUID} - %m%n" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
