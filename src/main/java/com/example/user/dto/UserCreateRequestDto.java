@@ -1,8 +1,8 @@
 package com.example.user.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

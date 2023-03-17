@@ -1,12 +1,12 @@
 package com.example.user.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.apache.logging.log4j.core.config.plugins.validation.constraints.NotBlank;
 
 @Getter
 @Setter
