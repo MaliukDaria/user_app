@@ -10,7 +10,9 @@ import com.example.user.util.FileUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
@@ -27,6 +29,14 @@ public class UserControllerTest {
 
   @Autowired
   private UserService userService;
+  @Value("${app.someProperty}")
+  private String propertiesVariable;
+
+  @Test
+  public void checkPropertiesVariable() {
+    Assertions.assertNotNull(propertiesVariable);
+    Assertions.assertTrue(StringUtils.isNotBlank(propertiesVariable));
+  }
 
   @Test
   public void create_validUser_ok() throws Exception {
